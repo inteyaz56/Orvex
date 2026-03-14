@@ -8,8 +8,8 @@ const Profile = () => {
   let { profile } = useSelector((state) => state.resturant);
   const address =
     typeof profile.address === "string"
-      ? JSON.parse(profile.address)
-      : profile.address;
+      ? JSON.parse(profile?.address)
+      : profile?.address;
 
   return (
     <div className="min-h-screen ">
