@@ -6,7 +6,7 @@ const Trending = () => {
   let { menus } = useSelector((state) => state.resturant);
 
   const trendingMenu = menus.slice(0, 12);
-  console.log("This is trending menu ", trendingMenu);
+
   const navigate = useNavigate();
   return (
     <div className="lg:px-8 lg:py-6 p-2 ">
