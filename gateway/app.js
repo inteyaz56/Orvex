@@ -8,7 +8,7 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: "https://orvex-one.vercel.app",
+    origin: "https://orvex.onrender.com",
   }),
 );
 
