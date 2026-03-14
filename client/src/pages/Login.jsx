@@ -29,7 +29,7 @@ const Login = () => {
         email,
         password,
       });
-      console.log(result.data);
+      console.log(serverUrl);
       dispatch(setUserData(result.data.user));
       localStorage.setItem("token", result.data.token);
       navigate("/");
