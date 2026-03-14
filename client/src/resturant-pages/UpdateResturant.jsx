@@ -40,7 +40,7 @@ const UpdateRestaurant = () => {
   const [banner, setBanner] = useState(null);
   const [bannerPreview, setBannerPreview] = useState(profile?.banner || null);
 
-  // 📍 Restaurant Location
+  
   const [location, setLocation] = useState({
     latitude: null,
     longitude: null,
@@ -59,11 +59,11 @@ const UpdateRestaurant = () => {
           longitude: position.coords.longitude,
         };
 
-        console.log("Restaurant location:", loc);
+    
         setLocation(loc);
       },
       (error) => {
-        console.log(error);
+
         toast.error("Unable to fetch location");
       },
     );
@@ -123,7 +123,7 @@ const UpdateRestaurant = () => {
 
       navigate(-1);
     } catch (error) {
-      console.log(error);
+  
       toast.error(error?.response?.data?.message || "Something went wrong");
     }
 
