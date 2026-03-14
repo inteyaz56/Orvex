@@ -12,7 +12,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Order from "./pages/Order";
 import UpdateRestaurant from "./resturant-pages/UpdateResturant";
-import AddCategory from "./resturant-pages/addCategory";
+
 import AddMenu from "./resturant-pages/AddMenu";
 import UpdateProfile from "./rider-page/UpdateProfile";
 import { ToastContainer } from "react-toastify";
@@ -29,13 +29,14 @@ import Resturant from "./pages/Resturant";
 
 import { getApproveResturant } from "./hooks/adminHooks";
 import ResturantDetails from "./pages/ResturantDetails";
+import AddCategory from "./resturant-pages/AddCategory";
 
 const App = () => {
   const { userData } = useSelector((state) => state.user);
 
   getCurrentUser();
   getApproveResturant();
-  // Join socket room
+
   useEffect(() => {
     if (!userData) return;
 
@@ -69,9 +70,7 @@ const App = () => {
           },
         );
       }
-    } catch (error) {
-      console.log("Notification error:", error);
-    }
+    } catch (error) {}
   };
 
   // Setup notifications
