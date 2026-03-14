@@ -22,7 +22,7 @@ await startOrderConsumer();
 //Middlewares
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://orvex-one.vercel.app",
   }),
 );
 app.use(cookieParser());
