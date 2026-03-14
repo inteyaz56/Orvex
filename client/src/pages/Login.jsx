@@ -29,14 +29,14 @@ const Login = () => {
         email,
         password,
       });
-      console.log(serverUrl);
+ 
       dispatch(setUserData(result.data.user));
       localStorage.setItem("token", result.data.token);
       navigate("/");
     } catch (error) {
       toast.error(error?.response?.data?.message || "Something went wrong");
-       console.log(serverUrl);
-      console.log(error);
+   
+  
     } finally {
       setLoading(false);
     }
