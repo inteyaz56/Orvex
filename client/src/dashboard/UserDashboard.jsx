@@ -9,6 +9,7 @@ import Biryani from "../components/Biryani";
 import Pizzas from "../components/Pizza";
 import Burger from "../components/Burger";
 import Footer from "../pages/Footer";
+import Hero from "../components/Hero";
 
 const UserDashboard = () => {
   getMyProfile();
@@ -18,6 +19,7 @@ const UserDashboard = () => {
   return (
     <div className="flex pt-20 flex-col gap-2 pb-24  ">
       <Navbar />
+      <Hero />
       <Trending />
       <FastFood />
       <Biryani />
