@@ -25,8 +25,11 @@ await startResturantConsumer();
 
 app.use(
   cors({
-    origin: "https://orvex.onrender.com",
-  }),
+    origin: [
+      "https://orvex.onrender.com",
+      "https://orvex-one.vercel.app",
+    ],
+  })
 );
 app.use(cookieParser());
 app.use(express.json());
