@@ -10,9 +10,12 @@ const PORT = process.env.PORT;
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  cors: {
-    origin: "https://orvex.onrender.com",
-  },
+ cors({
+    origin: [
+      "https://orvex.onrender.com",
+      "https://orvex-one.vercel.app",
+    ],
+  })
 });
 
 global.io = io;
