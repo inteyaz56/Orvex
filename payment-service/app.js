@@ -16,8 +16,11 @@ await startOrderConsumer();
 //Middlewares
 app.use(
   cors({
-    origin: "https://orvex.onrender.com",
-  }),
+    origin: [
+      "https://orvex.onrender.com",
+      "https://orvex-one.vercel.app",
+    ],
+  })
 );
 app.use(express.json());
 app.use(cookieParser());
