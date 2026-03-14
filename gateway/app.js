@@ -5,11 +5,13 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 const app = express();
 import cors from "cors";
 const PORT = process.env.PORT;
-
 app.use(
   cors({
-    origin: "http://localhost:5173",
-  }),
+    origin: [
+      "https://orvex.onrender.com",
+      "https://orvex-one.vercel.app",
+    ],
+  })
 );
 
 app.use(
@@ -31,7 +33,7 @@ app.use(
 app.use(
   "/resturants",
   createProxyMiddleware({
-    target: "http://localhost:3003",
+    target:process.env.RESTURANT_SERVER,
     changeOrigin: true,
   }),
 );

@@ -28,7 +28,7 @@ const Popup = () => {
 
       dispatch(setProfile(result.data));
     } catch (error) {
-      console.log("Profile error:", error);
+
     }
   };
 
@@ -48,7 +48,7 @@ const Popup = () => {
       console.log("Fetched Rider Orders:", result.data);
       setRiderOrders(result.data || []);
     } catch (error) {
-      console.log("Order error:", error);
+     
     }
   };
 

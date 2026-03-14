@@ -32,7 +32,6 @@ export const getRiderOrders = async () => {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log("This is rider orders", result.data);
 
     dispatch(setOrders(result.data));
   };

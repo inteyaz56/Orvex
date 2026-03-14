@@ -21,8 +21,12 @@ import authRoute from "./routes/auth.routes.js";
 //Middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
-  }),
+    origin: [
+      "https://orvex.onrender.com",
+      "https://orvex-one.vercel.app",
+    
+    ],
+  })
 );
 app.use(cookieParser());
 app.use(express.json());

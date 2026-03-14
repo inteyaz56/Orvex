@@ -82,7 +82,7 @@ export const getNotifications = async () => {
             },
           },
         );
-        console.log("This is notifications", result.data);
+  
         dispatch(setNotifications(result.data));
       } catch (error) {
         console.error("Error fetching notifications:", error);

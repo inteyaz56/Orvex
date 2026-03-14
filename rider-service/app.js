@@ -21,8 +21,11 @@ await startRiderConsumer();
 //Miiddlewares
 app.use(
   cors({
-    origin: "http://localhost:5173",
-  }),
+    origin: [
+      "https://orvex.onrender.com",
+      "https://orvex-one.vercel.app",
+    ],
+  })
 );
 app.use(express.json());
 app.use(cookieParser());

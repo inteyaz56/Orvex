@@ -59,7 +59,7 @@ const ProfileUpdate = () => {
       navigate(-1);
     } catch (error) {
       toast.error(error?.response?.data?.message || "Something went wrong");
-      console.log(error);
+     
     } finally {
       setLoading(false);
     }
