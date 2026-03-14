@@ -7,7 +7,7 @@ import { getMenu } from "../hooks/resturantHooks";
 const Menu = () => {
   getMenu();
   let { menu } = useSelector((state) => state.resturant);
-  console.log("This is menu", menu);
+;
   const navigate = useNavigate();
   const badgeColor = (badge) => {
     if (badge === "Most Popular") return "bg-orange-100 text-orange-600";
