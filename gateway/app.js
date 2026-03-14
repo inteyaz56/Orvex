@@ -5,11 +5,13 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 const app = express();
 import cors from "cors";
 const PORT = process.env.PORT;
-
 app.use(
   cors({
-    origin: "https://orvex.onrender.com",
-  }),
+    origin: [
+      "https://orvex.onrender.com",
+      "https://orvex-one.vercel.app",
+    ],
+  })
 );
 
 app.use(
