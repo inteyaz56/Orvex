@@ -11,7 +11,7 @@ import adminRoutes from "./routes/admin.routes.js";
 
 app.use(
   cors({
-    origin: "https://orvex-one.vercel.app",
+    origin: "https://orvex.onrender.com",
   }),
 );
 
