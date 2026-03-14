@@ -11,19 +11,19 @@ const Cart = () => {
 
   const { items, totalAmount } = useSelector((state) => state.cart);
 
-  // ✅ Increase Quantity
+
   const increaseQty = (item) => {
     dispatch(addToCart(item));
   };
 
-  // ✅ Decrease Quantity
+
   const decreaseQty = (id) => {
     dispatch(removeFromCart(id));
   };
 
   return (
     <div className="min-h-screen bg-[#f5ede3] pb-32">
-      {/* 🔥 Top Navbar */}
+      {/*  Navbar */}
       <div className="sticky top-0 z-50 bg-[#f5ede3] border-b border-gray-200 px-4 py-3 flex items-center gap-3">
         <button
           onClick={() => navigate(-1)}
@@ -34,7 +34,7 @@ const Cart = () => {
         <h2 className="text-lg font-semibold text-gray-800">Your Cart</h2>
       </div>
 
-      {/* 🛒 Cart Items */}
+      {/*  Cart Items */}
       <div className="px-4 py-6 space-y-5">
         {items.length === 0 && (
           <div className="text-center text-gray-500 mt-10">
@@ -98,7 +98,7 @@ const Cart = () => {
         ))}
       </div>
 
-      {/* 🔥 Sticky Bottom Checkout */}
+      {/*  Sticky Bottom Checkout */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-4 shadow-lg">
         <div className="flex justify-between items-center mb-3">
           <span className="text-gray-700 font-medium">Total Price</span>
