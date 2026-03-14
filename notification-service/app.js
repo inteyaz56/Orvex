@@ -19,7 +19,7 @@ await connectRabbitMQ();
 await startNotificationConsumer();
 
 //Middleware
-app.use(cors({ origin: "https://orvex-one.vercel.app" }));
+app.use(cors({ origin: "https://orvex.onrender.com" }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
