@@ -22,7 +22,7 @@ await startUserConsumer();
 //Middlewares
 app.use(
   cors({
-    origin: "https://orvex-one.vercel.app",
+    origin: "https://orvex.onrender.com",
   }),
 );
 app.use(express.json());
