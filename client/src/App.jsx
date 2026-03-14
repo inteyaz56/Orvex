@@ -29,7 +29,7 @@ import Resturant from "./pages/Resturant";
 
 import { getApproveResturant } from "./hooks/adminHooks";
 import ResturantDetails from "./pages/ResturantDetails";
-import AddCategory from "./resturant-pages/AddCategory";
+import AddCategory from "./resturant-dashboard/AddCategory";
 
 const App = () => {
   const { userData } = useSelector((state) => state.user);
