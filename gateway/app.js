@@ -31,7 +31,7 @@ app.use(
 app.use(
   "/resturants",
   createProxyMiddleware({
-    target: "http://localhost:3003",
+    target:process.env.USER_SERVER.RESTURANT_SERVER,
     changeOrigin: true,
   }),
 );
