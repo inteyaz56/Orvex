@@ -31,7 +31,7 @@ app.use(
 app.use(
   "/resturants",
   createProxyMiddleware({
-    target:process.env.USER_SERVER.RESTURANT_SERVER,
+    target:process.env.RESTURANT_SERVER,
     changeOrigin: true,
   }),
 );
